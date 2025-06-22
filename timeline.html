@@ -1,42 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Línea del Tiempo Horizontal</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Línea del Tiempo</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background: #f4f4f4;
-      overflow-x: hidden;
+      overflow: hidden;
     }
 
     h1 {
       text-align: center;
-      padding: 40px 20px 10px;
+      padding: 30px 20px 10px;
       font-weight: 300;
-      font-size: 32px;
+      font-size: 28px;
+    }
+
+    .timeline-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .arrow {
+      font-size: 40px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #555;
+      padding: 10px;
+      transition: transform 0.2s ease;
+    }
+
+    .arrow:hover {
+      transform: scale(1.2);
     }
 
     .timeline-container {
       display: flex;
-      overflow-x: auto;
-      padding: 40px 20px;
-      gap: 30px;
-      scroll-snap-type: x mandatory;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      gap: 20px;
+      padding: 10px;
+      width: 90%;
     }
 
     .evento {
-      min-width: 300px;
+      min-width: 260px;
       background: #fff;
       border-left: 4px solid #333;
-      padding: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 6px;
       flex-shrink: 0;
-      scroll-snap-align: center;
-      border-radius: 8px;
     }
 
     .evento a {
@@ -45,54 +67,82 @@
       font-weight: bold;
     }
 
-    .evento a:hover {
-      text-decoration: underline;
-    }
-
     .evento .fecha {
       color: #666;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .evento .titulo {
       font-size: 18px;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
+    }
+
+    .volver {
+      display: block;
+      margin: 30px auto;
+      padding: 12px 24px;
+      font-size: 16px;
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .volver:hover {
+      background: #555;
     }
   </style>
 </head>
 <body>
   <h1>Línea del Tiempo: De las Estrellas a la Historia</h1>
 
-  <div class="timeline-container">
-    <div class="evento">
-      <div class="fecha"><a href="eventos/bigbang.html">~13.8 mil millones a.C.</a></div>
-      <div class="titulo">Big Bang</div>
-      <p>Inicio del universo según la cosmología moderna.</p>
+  <div class="timeline-wrapper">
+    <button class="arrow" onclick="scrollTimeline(-1)">&#8592;</button>
+    <div class="timeline-container" id="timeline">
+      <div class="evento">
+        <div class="fecha"><a href="eventos/bigbang.html">~13.8 mil millones a.C.</a></div>
+        <div class="titulo">Big Bang</div>
+        <p>Inicio del universo según la cosmología moderna.</p>
+      </div>
+      <div class="evento">
+        <div class="fecha"><a href="eventos/atomos.html">~13.5 mil millones a.C.</a></div>
+        <div class="titulo">Primeros átomos</div>
+        <p>Formación de hidrógeno y helio.</p>
+      </div>
+      <div class="evento">
+        <div class="fecha"><a href="eventos/homo-sapiens.html">~300,000 a.C.</a></div>
+        <div class="titulo">Homo sapiens</div>
+        <p>Primeros humanos modernos.</p>
+      </div>
+      <div class="evento">
+        <div class="fecha"><a href="eventos/gobekli.html">~9,600 a.C.</a></div>
+        <div class="titulo">Göbekli Tepe</div>
+        <p>Templo megalítico preagrícola.</p>
+      </div>
+      <div class="evento">
+        <div class="fecha"><a href="eventos/jesus.html">~4 a.C. – 30 d.C.</a></div>
+        <div class="titulo">Jesús de Nazaret</div>
+        <p>Figura histórica con impacto global.</p>
+      </div>
+      <div class="evento">
+        <div class="fecha"><a href="eventos/2025.html">2025</a></div>
+        <div class="titulo">Presente</div>
+        <p>IA, cambio climático, exploración espacial.</p>
+      </div>
     </div>
-
-    <div class="evento">
-      <div class="fecha"><a href="eventos/homo-sapiens.html">~300,000 a.C.</a></div>
-      <div class="titulo">Aparición del Homo sapiens</div>
-      <p>Primeros humanos anatómicamente modernos en África.</p>
-    </div>
-
-    <div class="evento">
-      <div class="fecha"><a href="eventos/gobekli.html">~9,600 a.C.</a></div>
-      <div class="titulo">Göbekli Tepe</div>
-      <p>Templo megalítico antes del Neolítico.</p>
-    </div>
-
-    <div class="evento">
-      <div class="fecha"><a href="eventos/jesus.html">~4 a.C. – 30 d.C.</a></div>
-      <div class="titulo">Jesús de Nazaret</div>
-      <p>Figura histórica con impacto religioso y arqueológico.</p>
-    </div>
-
-    <div class="evento">
-      <div class="fecha"><a href="eventos/2025.html">2025</a></div>
-      <div class="titulo">Presente</div>
-      <p>Inteligencia Artificial, exploración espacial y cambio climático.</p>
-    </div>
+    <button class="arrow" onclick="scrollTimeline(1)">&#8594;</button>
   </div>
+
+  <button class="volver" onclick="location.href='index.html'">OK</button>
+
+  <script>
+    function scrollTimeline(direction) {
+      const container = document.getElementById('timeline');
+      const scrollAmount = 320;
+      container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
