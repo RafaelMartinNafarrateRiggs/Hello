@@ -28,16 +28,34 @@
       font-size: 90px;
       font-weight: 300;
       color: #333;
-      padding: 10px 25px;
+      padding: 40px 60px;
       border: 2px solid transparent;
-      border-radius: 12px;
+      border-radius: 0;
       transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .letras a::after {
+      content: attr(data-letra);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: transparent;
+      -webkit-text-stroke: 1px #333;
+      pointer-events: none;
+    }
+
+    .letras a:hover::after {
+      color: #333;
     }
 
     .letras a:hover {
-      background-color: #ffffffaa;
-      border-color: #ccc;
-      transform: scale(1.05);
+      border: 2px solid #333;
+    }
+
+    .letras a span {
+      visibility: hidden;
     }
 
     footer {
@@ -50,11 +68,11 @@
 </head>
 <body>
   <div class="letras">
-    <a href="h.html">H</a>
-    <a href="o.html">O</a>
-    <a href="l.html">L</a>
-    <a href="a.html">A</a>
+    <a href="h.html" data-letra="H"><span>H</span></a>
+    <a href="o.html" data-letra="O"><span>O</span></a>
+    <a href="l.html" data-letra="L"><span>L</span></a>
+    <a href="a.html" data-letra="A"><span>A</span></a>
   </div>
-  <footer>© 2025 Rafael Martin. Código con flow puro.</footer>
+  <footer>© 2025 Rafael Martin. Código de alta costura digital.</footer>
 </body>
 </html>
