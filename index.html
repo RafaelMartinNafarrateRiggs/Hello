@@ -3,32 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hola</title>
+  <title>HOLA</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       padding: 0;
-      height: 100vh;
       background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
       font-family: 'Inter', sans-serif;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      height: 100vh;
     }
 
-    h1 {
-      font-size: 100px;
+    .letras {
+      display: flex;
+      gap: 30px;
+    }
+
+    .letras a {
+      text-decoration: none;
+      font-size: 90px;
       font-weight: 300;
       color: #333;
-      letter-spacing: 3px;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.05);
-      margin: 0;
+      padding: 10px 25px;
+      border: 2px solid transparent;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .letras a:hover {
+      background-color: #ffffffaa;
+      border-color: #ccc;
+      transform: scale(1.05);
     }
 
     footer {
@@ -40,13 +49,12 @@
   </style>
 </head>
 <body>
-  <h1>HOLA</h1>
-  <footer>© 2025 Rafael Martin. Página powered by tacos, historia y buen flow.</footer>
-</body>
-</html>
-
-  <footer>
-    <p>&copy; 2025 Rafael Martin. Página powered by tacos, historia y buen flow.</p>
-  </footer>
+  <div class="letras">
+    <a href="h.html">H</a>
+    <a href="o.html">O</a>
+    <a href="l.html">L</a>
+    <a href="a.html">A</a>
+  </div>
+  <footer>© 2025 Rafael Martin. Código con flow puro.</footer>
 </body>
 </html>
