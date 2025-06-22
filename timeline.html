@@ -1,94 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Línea del Tiempo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Línea del Tiempo Horizontal</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
   <style>
     body {
+      margin: 0;
       font-family: 'Inter', sans-serif;
       background: #f4f4f4;
-      margin: 0;
-      padding: 40px;
+      overflow-x: hidden;
     }
 
     h1 {
       text-align: center;
+      padding: 40px 20px 10px;
       font-weight: 300;
-      margin-bottom: 40px;
+      font-size: 32px;
+    }
+
+    .timeline-container {
+      display: flex;
+      overflow-x: auto;
+      padding: 40px 20px;
+      gap: 30px;
+      scroll-snap-type: x mandatory;
     }
 
     .evento {
+      min-width: 300px;
       background: #fff;
       border-left: 4px solid #333;
-      margin: 20px 0;
       padding: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .evento:hover {
-      background: #fdfdfd;
-    }
-
-    .fecha {
-      font-weight: bold;
-      color: #555;
-    }
-
-    .titulo {
-      font-size: 20px;
-      margin: 5px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      flex-shrink: 0;
+      scroll-snap-align: center;
+      border-radius: 8px;
     }
 
     .evento a {
       text-decoration: none;
       color: #333;
+      font-weight: bold;
     }
 
     .evento a:hover {
       text-decoration: underline;
     }
+
+    .evento .fecha {
+      color: #666;
+      margin-bottom: 8px;
+    }
+
+    .evento .titulo {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
   </style>
 </head>
 <body>
-  <h1>Línea del Tiempo del Universo y la Humanidad</h1>
+  <h1>Línea del Tiempo: De las Estrellas a la Historia</h1>
 
-  <div class="evento">
-    <div class="fecha"><a href="eventos/bigbang.html">~13.8 mil millones a.C.</a></div>
-    <div class="titulo">Big Bang</div>
-    <p>Inicio del universo según la cosmología moderna.</p>
+  <div class="timeline-container">
+    <div class="evento">
+      <div class="fecha"><a href="eventos/bigbang.html">~13.8 mil millones a.C.</a></div>
+      <div class="titulo">Big Bang</div>
+      <p>Inicio del universo según la cosmología moderna.</p>
+    </div>
+
+    <div class="evento">
+      <div class="fecha"><a href="eventos/homo-sapiens.html">~300,000 a.C.</a></div>
+      <div class="titulo">Aparición del Homo sapiens</div>
+      <p>Primeros humanos anatómicamente modernos en África.</p>
+    </div>
+
+    <div class="evento">
+      <div class="fecha"><a href="eventos/gobekli.html">~9,600 a.C.</a></div>
+      <div class="titulo">Göbekli Tepe</div>
+      <p>Templo megalítico antes del Neolítico.</p>
+    </div>
+
+    <div class="evento">
+      <div class="fecha"><a href="eventos/jesus.html">~4 a.C. – 30 d.C.</a></div>
+      <div class="titulo">Jesús de Nazaret</div>
+      <p>Figura histórica con impacto religioso y arqueológico.</p>
+    </div>
+
+    <div class="evento">
+      <div class="fecha"><a href="eventos/2025.html">2025</a></div>
+      <div class="titulo">Presente</div>
+      <p>Inteligencia Artificial, exploración espacial y cambio climático.</p>
+    </div>
   </div>
-
-  <div class="evento">
-    <div class="fecha"><a href="eventos/primerosatomos.html">~13.5 mil millones a.C.</a></div>
-    <div class="titulo">Formación de los primeros átomos</div>
-    <p>Hidrógeno y helio se estabilizan tras el enfriamiento del universo.</p>
-  </div>
-
-  <div class="evento">
-    <div class="fecha"><a href="eventos/homo-sapiens.html">~300,000 a.C.</a></div>
-    <div class="titulo">Aparición del Homo sapiens</div>
-    <p>Primeros humanos anatómicamente modernos en África.</p>
-  </div>
-
-  <div class="evento">
-    <div class="fecha"><a href="eventos/gobekli-tepe.html">~9,600 a.C.</a></div>
-    <div class="titulo">Göbekli Tepe</div>
-    <p>Templo megalítico en Turquía anterior a la agricultura organizada.</p>
-  </div>
-
-  <div class="evento">
-    <div class="fecha"><a href="eventos/jesus.html">~4 a.C. – 30 d.C.</a></div>
-    <div class="titulo">Jesús de Nazaret</div>
-    <p>Figura histórica con respaldo arqueológico parcial y gran impacto cultural.</p>
-  </div>
-
-  <div class="evento">
-    <div class="fecha"><a href="eventos/2025.html">2025</a></div>
-    <div class="titulo">Presente</div>
-    <p>Exploración espacial, inteligencia artificial, cambio climático y más.</p>
-  </div>
-
 </body>
 </html>
