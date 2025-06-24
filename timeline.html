@@ -46,13 +46,15 @@
       display: flex;
       overflow-x: hidden;
       scroll-behavior: smooth;
-      gap: 20px;
+      gap: 16px;
       padding: 10px;
-      width: 90%;
+      width: 98vw;
+      max-width: 98vw;
     }
 
     .evento {
-      min-width: 260px;
+      min-width: 160px;
+      max-width: 200px;
       background: #fff;
       border-left: 4px solid #333;
       padding: 16px;
@@ -73,13 +75,13 @@
     }
 
     .evento .titulo {
-      font-size: 18px;
+      font-size: 16px;
       margin-bottom: 4px;
     }
 
     .volver {
       display: block;
-      margin: 30px auto;
+      margin: 30px auto 40px;
       padding: 12px 24px;
       font-size: 16px;
       background: #333;
@@ -122,9 +124,24 @@
         <p>Templo megalítico preagrícola.</p>
       </div>
       <div class="evento">
+        <div class="fecha"><a href="eventos/sumerios.html">~3,000 a.C.</a></div>
+        <div class="titulo">Civilización Sumeria</div>
+        <p>Primeras ciudades-estado en Mesopotamia.</p>
+      </div>
+      <div class="evento">
         <div class="fecha"><a href="eventos/jesus.html">~4 a.C. – 30 d.C.</a></div>
         <div class="titulo">Jesús de Nazaret</div>
         <p>Figura histórica con impacto global.</p>
+      </div>
+      <div class="evento">
+        <div class="fecha"><a href="eventos/revolucion.html">~1760 d.C.</a></div>
+        <div class="titulo">Revolución Industrial</div>
+        <p>Transformación tecnológica y económica.</p>
+      </div>
+      <div class="evento">
+        <div class="fecha"><a href="eventos/ia.html">2020s</a></div>
+        <div class="titulo">Inteligencia Artificial</div>
+        <p>Expansión de la automatización y aprendizaje automático.</p>
       </div>
       <div class="evento">
         <div class="fecha"><a href="eventos/2025.html">2025</a></div>
@@ -140,7 +157,7 @@
   <script>
     function scrollTimeline(direction) {
       const container = document.getElementById('timeline');
-      const scrollAmount = 320;
+      const scrollAmount = 250;
       container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
     }
   </script>
