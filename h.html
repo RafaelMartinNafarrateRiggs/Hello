@@ -1,1 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diseña tu Casa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #111;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-weight: 500;
+      margin: 0;
+      font-size: 32px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .intro {
+      font-size: 18px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .modulo {
+      background: #fff;
+      padding: 20px;
+      border-left: 5px solid #111;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      border-radius: 6px;
+    }
+
+    .modulo h3 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .modulo button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      font-size: 14px;
+      background: #111;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .modulo button:hover {
+      background: #444;
+    }
+
+    footer {
+      text-align: center;
+      color: #666;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Estudio de Diseño Arquitectónico</h1>
+  </header>
+
+  <div class="container">
+    <p class="intro">Bienvenido a tu espacio creativo. Aquí puedes seleccionar módulos clave para remodelar tu hogar: habitaciones, estilos arquitectónicos y elementos funcionales. Construye tu visión paso a paso.</p>
+
+    <div class="grid">
+      <div class="modulo">
+        <h3>Diseñar Recámara</h3>
+        <button onclick="alert('¡Herramienta de diseño en desarrollo!')">Configurar</button>
+      </div>
+
+      <div class="modulo">
+        <h3>Diseñar Cocina</h3>
+        <button onclick="alert('¡Próximamente cocinas inteligentes!')">Configurar</button>
+      </div>
+
+      <div class="modulo">
+        <h3>Plano de Planta</h3>
+        <button onclick="alert('Visualización del plano próximamente.')">Ver Plano</button>
+      </div>
+
+      <div class="modulo">
+        <h3>Fachada Moderna</h3>
+        <button onclick="alert('Muestra de fachada no disponible aún.')">Ver Diseño</button>
+      </div>
+
+      <div class="modulo">
+        <h3>Estilo Industrial</h3>
+        <button onclick="alert('Aplicar estilo industrial')">Activar</button>
+      </div>
+
+      <div class="modulo">
+        <h3>Materiales Sugeridos</h3>
+        <button onclick="alert('Lista de materiales próximamente.')">Ver</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Rafael Martin. Diseño conceptual creado con precisión pixelar.
+  </footer>
+</body>
+</html>
 
