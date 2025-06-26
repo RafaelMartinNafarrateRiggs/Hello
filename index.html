@@ -2,30 +2,40 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>HOLA</title>
+  <title>HOLA - Loza</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
-      background: linear-gradient(135deg, #fafafa, #eaeaea);
+      background: #fdfcfb;
       font-family: 'Inter', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      color: #333;
     }
 
-    h1 {
+    a.letra {
+      font-size: 100px;
       font-weight: 300;
-      font-size: 60px;
+      text-decoration: none;
+      color: #222;
+      padding: 40px 60px;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    a.letra:hover {
+      color: #000;
       letter-spacing: 8px;
+      border-bottom: 2px solid #000;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <h1>HOLA</h1>
+  <a href="loza.html" class="letra">L</a>
 </body>
 </html>
+
